@@ -1,0 +1,13 @@
+{% extends 'Election/layout.html' %}
+
+{% block body %}
+<form method="post" url="{% url 'New_PU' %}">
+  {% csrf_token %}
+  {{form.media.js}}
+  {{ form.as_p }}
+  <input type="submit" value="Save">
+</form>
+
+<div><a href ="{% url 'index' %}"> Back </a> </div>
+
+{% endblock %}

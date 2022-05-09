@@ -1,0 +1,44 @@
+{% extends 'Election/layout.html' %}
+
+{% block body %}
+<form method="post" url="{% url 'LGA_result' %}">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+  </form>
+
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+      text-align: left;
+    }
+    </style>
+
+
+  <div>
+    {% if sum %}
+   <table>
+    <tr>
+      <th>Party</th> 
+      {% for i in party_names %}
+         <td>{{i}}</td>
+    {% endfor %}          
+    </tr>
+
+    <tr>
+    <th>Total Votes</th>
+      {% for i in sum %}
+      <td>{{i}}</td>
+    {% endfor %}
+  </tr>
+  </table> 
+  {% endif %}
+</div>
+  <div><a href ="{% url 'index' %}"> Back </a> </div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'Election/layout.html' %}
+
+{% block body %}
+
+<div>1.<a href="{% url 'home'%}"> Display Individual Polling Unit result</a></div>
+
+<div>2.<a href="{% url 'LGA_result'%}"> Display collated LGA result </a></div>
+
+<div>3.<a href="{% url 'New_PU'%}"> Store new Polling Unit Result </a></div>
+
+
+
+{% endblock %}
