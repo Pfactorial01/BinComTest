@@ -79,8 +79,11 @@ WSGI_APPLICATION = 'BinComTest.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'election_data',
-        'USER': 'root'
+        'NAME':'heroku_024b7d1e8ee446a',
+        'HOSTNAME':'us-cdbr-east-05.cleardb.net'
+        'USER':'b13ea762ddfafa'
+        'PASSWORD':'51fda3a8'
+        
         
     }
 }
